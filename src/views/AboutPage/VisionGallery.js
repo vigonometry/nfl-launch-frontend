@@ -9,17 +9,20 @@ const vision = [
   {
     img: generalpublic,
     title: 'General Public',
-    description: 'Text',
+    description:
+      'Make NUS FinTech Lab a must visit destination for people from all walks of life. Join us at our Treasure Hunt and Lab Tour to discover more.',
   },
   {
     img: keypartners,
     title: 'Key Partners',
-    description: 'Text',
+    description:
+      'Pioneer experiential learning in the Singaporean FinTech ecosystem. Find out more at our thought leadership and senior leader engagement sessions.',
   },
   {
     img: students,
     title: 'Students',
-    description: 'Text',
+    description:
+      'Upskill and edify career professionals through FinTech literacy and development opportunities. Find out more at our thought leadership, senior leader engagement and mini-recruitment sessions.',
   },
 ];
 

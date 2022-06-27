@@ -3,6 +3,7 @@ import {
   Heading,
   HStack,
   Image,
+  Link,
   Spacer,
   Text,
   useBreakpointValue,
@@ -15,6 +16,7 @@ import './AboutPage.css';
 
 export default function FriendsPage() {
   const isSmallScreen = useBreakpointValue({ base: true, lg: false });
+  
   const FriendsPageDesktop = (
     <HStack align="top" w="full" p={6}>
       <VStack align="baseline" w="full" spacing={6}>
@@ -24,9 +26,11 @@ export default function FriendsPage() {
           <br /> Registering with us makes signing up for our events
           instantaneous and updates you on our events and programmes.
         </Text>
-        <Button colorScheme="orange" fontSize={24} size="lg">
-          Discover More
-        </Button>
+        <Link href="https://fintechlab.nus.edu.sg/">
+          <Button colorScheme="orange" fontSize={24} size="lg">
+            Visit our website
+          </Button>
+        </Link>
       </VStack>
       <Spacer />
       <Image src={friendsofft2} w="full" />
@@ -43,14 +47,16 @@ export default function FriendsPage() {
         and updates you on our events and programmes.
       </Text>
       <Spacer />
-      <Button colorScheme="orange" fontSize={24} size="lg">
-        Discover More
-      </Button>
+      <Link href="https://fintechlab.nus.edu.sg/">
+        <Button colorScheme="orange" fontSize={24} size="lg">
+          Visit our website
+        </Button>
+      </Link>
     </VStack>
   );
 
   return (
-    <VStack id="aboutsubpage" p={6} spacing={4} w='full'>
+    <VStack id="aboutsubpage" p={6} spacing={4} w="full">
       <Heading textAlign="center">Friends of FinTech</Heading>
       <Image src={friendsofft} w="100vw" />
       <Spacer />

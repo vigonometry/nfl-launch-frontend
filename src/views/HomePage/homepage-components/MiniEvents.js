@@ -32,7 +32,7 @@ export const MiniEvents = () => {
   return (
     <Box gap={2}>
       <Heading textAlign='center'>Events in Store</Heading>
-      <EventGrid events={events} />
+      <EventGrid events={events} filt={'All'} />
     </Box>
   );
 };

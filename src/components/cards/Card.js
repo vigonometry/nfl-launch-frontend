@@ -18,6 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import MiniEvents from '../../views/HomePage/homepage-components/MiniEvents';
 
 export default function Card(content) {
   const [shown, setShown] = useState(false);
@@ -32,7 +33,8 @@ export default function Card(content) {
           <ModalHeader>{content.title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text>{content.description}</Text>
+            <Text pb={6}>{content.description}</Text>
+            <MiniEvents />
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="blue" mr={3} onClick={handleClose}>

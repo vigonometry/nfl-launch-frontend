@@ -1,4 +1,4 @@
-import { Box, VStack } from '@chakra-ui/react';
+import { Box, VStack, Heading, Text } from '@chakra-ui/react';
 import { useRef } from 'react';
 import Hero from './homepage-components/Hero';
 import MiniEvents from './homepage-components/MiniEvents';
@@ -17,6 +17,8 @@ export default function HomePage() {
         <RSVP />
         <MiniEvents />
       </Box>
+      <Heading textAlign='center'>Our Sponsors</Heading>
+      <Text>This is a placeholder</Text>
     </VStack>
   );
 }

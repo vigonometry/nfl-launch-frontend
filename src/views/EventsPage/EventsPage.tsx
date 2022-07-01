@@ -6,7 +6,7 @@ import { EventsHero } from "./EventsHero";
 const useStyles = createStyles((theme) => ({
   title: {
     fontWeight: 700,
-    marginTop: theme.spacing.md,
+    marginTop: theme.spacing.xs * 0.5,
     marginBottom: theme.spacing.xs,
     textAlign: "center",
     fontSize: 30,
@@ -31,7 +31,7 @@ export function EventsPage() {
     <div>
       <EventsHero />
       <Group className={classes.group} position="center" spacing="xs" >
-        <Text className={classes.title}>I am interested in:</Text>
+        <Text className={classes.title}>I am interested in</Text>
         <Select
           value={value}
           onChange={setValue}

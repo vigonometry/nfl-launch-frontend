@@ -91,7 +91,11 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function Hero() {
+interface HeroProps {
+  onClick: () => void
+}
+
+export function Hero(props: HeroProps) {
   const { classes } = useStyles();
 
   return (
@@ -118,7 +122,7 @@ export function Hero() {
             >
               RSVP to Our Launch
             </Button>
-            <Button size="md" radius="xl" variant="default">
+            <Button size="md" radius="xl" variant="default" onClick={props.onClick}>
               Discover More
             </Button>
           </Stack>

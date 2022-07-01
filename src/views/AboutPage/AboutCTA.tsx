@@ -1,5 +1,5 @@
 import {
-    Button,
+  Button,
   Container,
   createStyles,
   Group,
@@ -98,18 +98,26 @@ export function AboutCTA() {
             className={classes.list}
           >
             <List.Item>
-              <b>Thought Leadership</b> - We are a facilitator of conversations.
+              <b>Thought Leadership</b> - A platform to connect industry
+              leaders, governments, regulators and academia.
             </List.Item>
             <List.Item>
-              <b>Innovation Support</b> - We aim to cultivate the next
-              generation of FinTech leaders.
+              <b>Innovation Support</b> - Nurture the next generation of FinTech
+              leaders.
             </List.Item>
             <List.Item>
-              <b>Education</b> - Our lab will showcase student innovation,
-              facilitate learning and grant the competitive edge.
+              <b>Education</b> - Showcasing student innovation, facilitating
+              learning and granting the competitive edge.
             </List.Item>
           </List>
-          <Button<"a"> component="a" size="lg" radius="xl" href="https://fintechlab.nus.edu.sg/fof/">Become a Friend</Button>
+          <Button<"a">
+            component="a"
+            size="lg"
+            radius="xl"
+            href="https://fintechlab.nus.edu.sg/fof/"
+          >
+            Become a Friend
+          </Button>
         </Stack>
         <Image src={aboutus} className={classes.image} width="120%" />
       </Group>

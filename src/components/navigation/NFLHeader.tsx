@@ -9,6 +9,7 @@ import {
 } from "@mantine/core";
 
 import { useBooleanToggle } from "@mantine/hooks";
+import { useNavigate } from "react-router-dom";
 
 const HEADER_HEIGHT = 60;
 
@@ -39,8 +40,9 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.md,
     textDecoration: "none",
     color: theme.colors.gray[7],
-    fontSize: theme.fontSizes.md,
+    fontSize: theme.fontSizes.lg,
     fontWeight: 600,
+    cursor: "pointer",
 
     "&:hover": {
       backgroundColor: theme.colors.gray[0],
@@ -78,11 +80,16 @@ interface NFLHeaderProps {
 export function NFLHeader({ links }: NFLHeaderProps) {
   const { classes } = useStyles();
   const [opened, toggleOpened] = useBooleanToggle(false);
+  const navigate = useNavigate();
   const items = links.map((link) => {
     return (
-      <a key={link.label} href={link.link} className={classes.link}>
+      <div
+        key={link.label}
+        onClick={() => navigate(link.link)}
+        className={classes.link}
+      >
         {link.label}
-      </a>
+      </div>
     );
   });
 
@@ -105,6 +112,7 @@ export function NFLHeader({ links }: NFLHeaderProps) {
           radius="xl"
           sx={{ height: 30 }}
           href="https://fintechlab.nus.edu.sg/"
+          size="md"
         >
           Visit our website
         </Button>

@@ -8,7 +8,7 @@ export const eventList = [
   {
     image: tlimg,
     title: "Leadership Dialogue Dinner",
-    description: "Engage with c-suite leaders over dinner and expand your horizons.",
+    description: "Engage with c-suite leaders over dinner and expand your horizons.", //by invitation only
     tag: "Career Development",
   },
   {

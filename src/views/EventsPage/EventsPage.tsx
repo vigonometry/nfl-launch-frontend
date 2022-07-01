@@ -1,4 +1,4 @@
-import { createStyles, Group, Select, Stack, Text, Title } from "@mantine/core";
+import { createStyles, Group, Select, Text } from "@mantine/core";
 import { useState } from "react";
 import { EventsGrid } from "../../components/events/EventsGrid";
 import { EventsHero } from "./EventsHero";

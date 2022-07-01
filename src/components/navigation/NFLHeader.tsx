@@ -11,7 +11,9 @@ import {
 import { useBooleanToggle } from "@mantine/hooks";
 import { useNavigate } from "react-router-dom";
 
-const HEADER_HEIGHT = 60;
+const logo = require("./assets/nfl-logo.png");
+
+const HEADER_HEIGHT = 84;
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -22,13 +24,13 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    [theme.fn.smallerThan("sm")]: {
+    [theme.fn.smallerThan("md")]: {
       display: "none",
     },
   },
 
   burger: {
-    [theme.fn.largerThan("sm")]: {
+    [theme.fn.largerThan("md")]: {
       display: "none",
     },
   },
@@ -63,7 +65,7 @@ const useStyles = createStyles((theme) => ({
     borderTopWidth: 0,
     overflow: "hidden",
 
-    [theme.fn.largerThan("sm")]: {
+    [theme.fn.largerThan("md")]: {
       display: "none",
     },
   },
@@ -73,7 +75,6 @@ interface NFLHeaderProps {
   links: {
     link: string;
     label: string;
-    links?: { link: string; label: string }[];
   }[];
 }
 
@@ -96,26 +97,25 @@ export function NFLHeader({ links }: NFLHeaderProps) {
   return (
     <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }}>
       <Container className={classes.inner} fluid>
-        <Group>
-          <Burger
-            opened={opened}
-            onClick={() => toggleOpened()}
-            className={classes.burger}
-            size="sm"
-          />
-        </Group>
+        <Image src={logo} height={60} />
+        <Burger
+          opened={opened}
+          onClick={() => toggleOpened()}
+          className={classes.burger}
+          size="sm"
+        />
         <Group spacing={5} className={classes.links}>
           {items}
+          <Button<"a">
+            component="a"
+            radius="xl"
+            sx={{ height: 30 }}
+            href="https://fintechlab.nus.edu.sg/"
+            size="md"
+          >
+            Visit our website
+          </Button>
         </Group>
-        <Button<"a">
-          component="a"
-          radius="xl"
-          sx={{ height: 30 }}
-          href="https://fintechlab.nus.edu.sg/"
-          size="md"
-        >
-          Visit our website
-        </Button>
       </Container>
     </Header>
   );

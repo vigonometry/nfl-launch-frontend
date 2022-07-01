@@ -1,6 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import LaunchHeader from "./components/navigation/LaunchHeader";
 import { AppShell } from "@mantine/core";
 import { HomePage } from "./views/HomePage/HomePage";
@@ -9,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 import { EventsPage } from "./views/EventsPage/EventsPage";
 import { ErrorPage } from "./views/ErrorPage/ErrorPage";
 
-const img = require("./views/HomePage/assets/metaverse.gif");
 
 function App() {
   return (

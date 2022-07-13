@@ -59,6 +59,7 @@ interface EventCardProps {
   title: string;
   description: string;
   tag: string;
+  link?: string;
 }
 
 const tagColor = (tag: string) => {
@@ -95,8 +96,13 @@ export function EventCard(event: EventCardProps) {
       <Title className={classes.title}>{event.title}</Title>
 
       <Text className={classes.text}>{event.description}</Text>
-
-      {/* <Button className={classes.button}>Find out More</Button> */}
+      {event.link ? (
+        <Button<"a"> component="a" className={classes.button} href={event.link}>
+          Find out More
+        </Button>
+      ) : (
+        <></>
+      )}
     </Card>
   );
 }

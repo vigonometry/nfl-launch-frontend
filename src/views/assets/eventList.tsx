@@ -13,6 +13,7 @@ export const eventList = [
     description:
       "Engage with our students and learn more about how they're paving the way in FinTech.",
     tag: "Test of Tech",
+    link: "/projects"
   },
   {
     image: ppimg,
@@ -20,6 +21,7 @@ export const eventList = [
     description:
       "Connect with our partners and find out more about the projects they are working on.",
     tag: "Career Development",
+    link: "/projects"
   },
   {
     image: tlimg,

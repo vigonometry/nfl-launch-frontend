@@ -27,6 +27,10 @@ const useStyles = createStyles((theme) => ({
   stack: {
     padding: theme.spacing.xl * 4,
     paddingTop: theme.spacing.xl,
+
+    [theme.fn.smallerThan("sm")]: {
+      padding: theme.spacing.xl,
+    },
   },
 }));
 
@@ -45,7 +49,7 @@ export function EventsGrid(filter: string | null, pageTitle: string) {
         ]}
       >
         {eventList
-          .filter((event) => filter === "All" ? true : filter === event.tag)
+          .filter((event) => (filter === "All" ? true : filter === event.tag))
           .map((event) => (
             <EventCard {...event} />
           ))}

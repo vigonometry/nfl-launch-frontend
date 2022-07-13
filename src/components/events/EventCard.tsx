@@ -96,7 +96,7 @@ export function EventCard(event: EventCardProps) {
 
       <Text className={classes.text}>{event.description}</Text>
 
-      <Button className={classes.button}>Find out More</Button>
+      {/* <Button className={classes.button}>Find out More</Button> */}
     </Card>
   );
 }

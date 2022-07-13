@@ -8,7 +8,7 @@ const NFLHeader = ({opened, toggle}: {opened: boolean, toggle: () => void}) => {
     return (
         <Header height={84} p='xl'>
             <Group position="apart">
-                <Image src={logo} height={60}/>
+                <Image src={logo} height={40}/>
                 <MediaQuery smallerThan='sm' styles={{display: 'none'}}>
                     <Group>
                         <SiteNavigationButtons smallScreen={false}/>

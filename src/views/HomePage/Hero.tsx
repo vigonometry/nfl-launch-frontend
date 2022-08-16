@@ -109,7 +109,7 @@ export function Hero(props: HeroProps) {
         <Stack className={classes.inner}>
           <Title className={classes.title}>Reimagine, Reinvent, Realize.</Title>
           <Text className={classes.text}>
-            Experience the Metaverse with NUS FinTech Labs
+            Experience the Metaverse with NUS FinTech Lab
           </Text>
           <Stack className={classes.hstack}>
             <Button<"a">

@@ -6,7 +6,8 @@ const logo = require('./assets/nfl-logo.jpeg')
 const useStyles = createStyles((theme) => ({
     img: {
         [theme.fn.smallerThan('sm')]: {
-            height: 30
+            width: "25%",
+            height: "25%"
         }
     }
 }))
